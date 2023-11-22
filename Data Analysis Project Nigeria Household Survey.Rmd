@@ -1,0 +1,535 @@
+---
+title: "The Relationship Between Economic Vulnerability And Measurements of Standards of Living: A Case Study of Nigeria"
+author: "Omari Mwakuluzo Kassim"
+date: "2023-05-04"
+output:
+  pdf_document:
+    highlight: tango
+    toc: yes
+    toc_depth: '3'
+    number_sections: no
+    fig_width: 8
+    fig_height: 6
+    fig_caption: yes
+    df_print: kable
+mainfont: "Times New Roman"
+fontsize: 11pt
+---
+\newpage
+## Abstract  
+This study examines the effect of income levels, level of education, health, condition of houses and number of assets owned on the number of economic shocks a household experiences in a Nigerian household. It covers ground by exploring models that relate multiple factors of standards of living and their relationship with economic vulnerability. The study aims to answer the research question: How do levels of income, education, health, housing conditions and the number of assets owned affect the number of economic shocks experienced by households in Nigeria between 2018 and 2019? Multiple regression models that can predict the explanatory variable with more accuracy and reliability were developed and compared based on their ability to yield more accurate and reliable results. The findings from this study suggest that there is a positive correlation between the number of days suffered in injury or illness and the number of economic shocks experiences by households and negative correlations between income, education level, housing conditions, and number of assets owned and the number of economic shocks experienced by households. Results showed that a model with increased numbers of independent variables and linearized using logarithmic transformation was a more reliable model of predicting the outcome variable. This was due to its increased explanatory power mainly as a result of the logarithmic transformation.  
+
+## Introduction and Literature review
+This study explores the relationship between different factors affecting the standards of living in an average Nigerian household. The paper analyzes the relationship between economic shocks and household’s income, health, education levels, housing conditions, and the number of assets owned in Nigeria as one way to measure the economic vulnerability or fragility of households surveyed in the Living Standards Survey 2018-2019 for Nigeria. The data used in this study is based on the Living Standards Survey 2018-2019 from the World Bank.  
+
+Most literature reviews focus on the impact of economic shocks or stress on different factors of standards of living. For instance, in several papers, economic shocks have been found to have a positive relationship with factors like income as they are directly related through economic intuition. However, there is less literature explicitly examining the impacts of different measures of living standards on economic shocks. This paper attempts to explore this ground through the case study of Nigerian households.  
+
+This paper attempts to answer the research question: *How do levels of income, education, health, housing conditions and the number of assets owned affect the number of economic shocks experienced by households in Nigeria between 2018 and 2019?* In the study, household income is measured by the households' monthly income. Levels of education are measured as the average number of years completed by individuals in a household, and this is categorized into different types of education qualifications and or certifications in Nigeria based on the number of years of education completed.  Health is measured as the number of days individuals suffered from injury or illnesses of any type in a month. Housing conditions is measured as the predicted rental value of a household. Predicted rental value of a household gives us an idea of the conditions of the household as perceived by its dwellers. The number of assets owned will simply be measured as the number of assets possessed by the household.  
+
+Income is a very important factor when it comes to determining the economic stability of a household. The amount of income that flows into a household is directly linked to the household’s economic stability as it is the primary means that allows for households’ consumption. Research in *the Journal of Economic Modelling* shows that income levels of a household are negatively associated with a household’s economic and economic vulnerability. Its findings suggest that households with high income do not only experience less shocks but can also absorb negative economic shocks (Noerhidajati, Purwoko, Werdaningtyas, Kamil, & Dartanto, 2021). This is also consistent with microeconomic theory that households with higher income levels spend more in the economy and have more stability with regards to economic and economic stress and coping with it when it arises.
+
+Literature reviews suggest that education positively impacts the level of economic stability of a household. When a household has individuals with a high education level, there is a high likelihood that the household is economically stable. A study conducted in Vietnam showed that houses that have individuals with higher levels of education had a more stable economic health while those classified as poor and with relatively unstable economic foundations had individuals with low education levels(Van Vu, 2020). The indication of good economic health could be due to 2 possible rationales:  The first being that a household with high level of education is likely to have employed individuals with high salaries who support the household financially. The second being that a household with individuals who have high levels of education is an indication of a financially capable household that can spend on education (since education spending usually increases with the number of schooling years). Therefore, on average, the likelihood that a household is economically stable (experiences less economic shocks) would increase when you have more educated individuals in the household.   
+
+Health is also suggested to have effects on a household’s economic health. As individuals suffer sustained illnesses or injuries, they are unable to meaningfully participate in the labor force. People with low health levels also tend to put more pressure towards household finances for things like care and out of pocket medical expenses. These tend to increase the likelihood of economic instability in a household and thus increasing the chance that a household will experience economic shocks. A study in *The Journal of Economic Perspective* investigated the relationship between Health and Economic status, mainly looking at wealth and the ability to earn income. They found that on average, individuals with better health had more wealth than those with poor health and that savings fall as health deteriorates due to a reduction in current period income and or increased out of pocket consumption due to medical expenses (Smith, 1999).   
+
+Housing conditions are also a good predictor of the economic vulnerability of households. If a house is predicted to have a high rental value by its tenant, it signifies that the house is in good condition and therefore suggests a high chance that the household is economically robust. A study investigating the relationship between long term income flows and housing deprivation found that, on average, houses with high levels of deprivation (poorer conditions) are associated with low sustained levels of income over time than houses with less deprivation, or in good condition (Fusco, 2012). Therefore, predicted rental values will be important in giving us an idea of the condition of a house and this will serve as a good indicator of the economic health of that household.  
+
+Like housing conditions, the number of assets a household owns is a good indicator of a household’s economic strength and its ability to cope with economic shocks or stress. Households with more assets usually are better off economically as it indicates that the household has enough resources to afford those assets and thus is likely to encounter less economic shocks.  
+
+
+## Hypotheses and Specifications
+
+### Hypothesis and main specification  
+
+Based on the empirical knowledge and literature review presented beforehand, this paper hypothesizes that more years of education (an indicator of high education level), a smaller number of days suffered in illness (an indicator of good health), high predicted rental value of houses (an indicator of good housing conditions), and large number of assets owned are associated with lower numbers of economic shocks in the average Nigerian household from the survey. With this intuition, a multiple linear regression model below is expected in the study:  
+
+Economic Shocks = $\beta0$ + $\beta1$ Income + $\beta2$ Education + $\beta3$ Health + $\beta4$ Assets + $\beta5$ Housing + $\epsilon$
+
+Where $\beta0$ is expected to be positive, since with no education or with a very low education level, on average, a household is expected to encounter some economic difficulties. $\beta1$ is expected to be negative since a higher income would make a houshold more economically stable and therefore reduce the number of economic shocks. $\beta2$ is expected to be negative since an increase in education level would result in a decrease in the number of economic shocks that a household faces. $\beta3$ is expected to be very small or negative since an increase in the number of days suffered in injury would bring economic stress to a household. The hypothesis for this variable assumes that as health deteriorates in a household, individuals do not go to work, else, the reasoning above would not apply. For instance, it would not hold for individuals who would still go to work despite being injured or having illnesses. $\beta3$ and $\beta5$ are also expected to be negative since an increase in the predicted rental value and an increase in the number of assets owned by a household are indicators of good economic strength of a household.  
+
+### Alternative hypothesis and specification  
+
+While the aforementioned explanatory variables may be good predictors of economic shocks, there are many more factors in the survey that may also affect the number of economic shocks that a household encounters. These include, but not limited to, factors that directly or indirectly relate to sources of income such as whether households have any businesses or not, or whether households received any loans and the amount received in loans. Therefore, an alternative model that includes more of such factors may be a more accurate model predicting the number of economic shocks that a household faces. The chosen alternative model for this study includes an extra variable (enterprise - named business in the study) that looks at whether a household has a non-agricultural business or offered any non-agricultural service and how that affects or predicts the number of economic shocks that a household faces. This may be a more accurate predictor of the number of economic shocks as it includes an extra variable that may have a significant impact, and that would have otherwise been included in the error term. Therefore, the alternative specification is:  
+
+Economic Shocks = $\beta0$ + $\beta1$ Income + $\beta2$ Education + $\beta3$ Health + $\beta4$ Assets + $\beta5$ Housing + $\beta6$ Business + $\epsilon$ 
+
+Where the business variable takes a value of 0 or 1. 0 indicates No, for the households that do not have any non-agricultural business or services, and Yes, for the households that do have. The key assumption for this variable is that the businesses are not not-for-profit businesses and run with the aim of generating revenue and profits for household income purposes. This is because not-for-profit businesses may not have any effects on the number of economic shocks that a household receives since they do not generate any income for the households, and very few low income households would be willing to venture in such types of business as they would be more of a liability than something that generates a monetary payoff.  
+
+## Data and Methodology  
+### Data  
+The data used is the household data sourced from the Living Standards Survey 2018-2019 of Nigeria found on [the world bank](https://microdata.worldbank.org/index.php/catalog/3827). It included several variables that were investigated such as household demographics, education, health, labour, food and non-food expenditure, household non-farm income-generating activities, food security and shocks, housing conditions, assets and other variables.  
+
+### Methods  
+After cleaning and preparing the data, descriptive statistics were used to gain a more in-depth understanding of the data and its distribution across the different variables. They were also used to single out variables that had initially been included in the research but omitted after data cleaning. Variables with very large disparities (that would negatively affect or that would not add any value to the research) were omitted and replaced. For instance, in remittances, where the chosen variable looked at whether households received remittances or not, there were very many households that received remittances and only a few did not. Therefore, this would not have been helpful in observing the effects of remittances on economic shocks as a very large percentage of the household received remittance.  
+
+Single linear regressions were then used to understand the effects of each explanatory variable on the outcome variable and multiple regressions were used to examine the effects of all the variables as a single model and the marginal effects of each of the variables on the number of economic shocks.  
+
+### Data wrangling
+The data wrangling process included omitting missing values, renaming variables, merging the tables of different variables into one table (by household id), leveling and reveling of categorical variables and other minor processes. The levels of the categorical variable (Education) were renamed according to the names of the education levels and qualifications given in the survey. Therefore, the values (1, 2, 3, 5, 6, 7, 8, 9, 11, 12, 13, 41 and 43), were renamed using the provided category names ("None" for no education qualification, "FSLC" for First School Leaving Certificate, "MSLC" for Middle School Leaving Certificate, "JSSC" for Junior Secondary School Certificate, "SSS" for Senior Secondary School Certificate, "AL" for Advanced (A) Level, "NCE" for Nursing Certificate, "BA" for Bachelors, "MA" for Masters, "PHD", "Other" for other types of qualifications, and "VOCC" and "VOCD" which are types of qualifications for which much information has not been provided.)
+
+
+```{r Setup of working directory and loading libraries, message=FALSE, warning=FALSE}
+setwd("~/University Folder/2nd Year/Spring Term/Data Analysis/Project/New Files")
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(car)
+library(lmtest)
+library(outliers)
+library(magrittr)
+```
+
+```{r Loading of Data Sets, message=FALSE, warning=FALSE}
+income <- read.csv("sect13_income.csv", sep = ",", header = TRUE)
+housing <- read.csv("sect14_housing.csv", sep = ",", header = TRUE)
+economicshock <- read.csv("sect16_shocks.csv", sep = ",", header = TRUE)
+education <- read.csv("sect2_education.csv", sep = ",", header = TRUE)
+health <- read.csv("sect3_health.csv", sep = ",", header = TRUE)
+assets <- read.csv("sect10_assets.csv", sep = ",", header = TRUE)
+enterprise<- read.csv("sect9a_enterprise.csv", sep= ",", header= TRUE)
+```
+
+```{r Selecting appropriate variables and removing NAs, message=FALSE, warning=FALSE}
+income1<- subset(income, select = c(hhid, zone_id, state_id, sector, lga, ea_code,
+                                    s13q02))
+housing1<- subset(housing, select = c(hhid, zone, state, sector, lga, ea, s14q04a))
+economicshock1<- subset(economicshock, select = c(hhid, zone, state, sector, lga,
+                                                  ea, s16q03, s16q01))
+education1<- subset(education, select = c(hhid, zone, state, sector, lga, ea,
+                                          s02q08,s02q15))
+health1<- subset(health, select = c(hhid, zone, state, sector, lga, ea, s03q07a))
+assets1<- subset(assets, select = c(hhid, zone, state, sector, lga, ea, s10q02))
+enterprise1<- subset(enterprise, select= c(hhid, zone, state, sector, lga, ea,
+                                           s09q01__1))
+assets2<- assets1 %>%
+  group_by(hhid)%>%
+  summarize(total_assets = ifelse(all(is.na(s10q02)), NA, sum(s10q02,
+                                                              na.rm = TRUE)))
+income2 <- income1 %>%
+  group_by(hhid) %>%
+  summarize(total_income = ifelse(all(is.na(s13q02)), NA, sum(s13q02,
+                                                              na.rm = TRUE)))
+education2<- education1 %>%
+  group_by(hhid) %>% 
+  summarize(education_level = ifelse(all(is.na(s02q08)), NA, max(s02q08,
+                                                                 na.rm = TRUE)))
+health2<- health1 %>%
+  group_by(hhid) %>% 
+  summarize(total_injury = ifelse(all(is.na(s03q07a)), NA, sum(s03q07a,
+                                                               na.rm = TRUE)))
+economicshock1 <- economicshock1 %>%
+  mutate(s16q01 = ifelse(s16q01 == 1, 0, s16q01))
+economicshock1 <- economicshock1 %>%
+  mutate(s16q01 = ifelse(s16q01 == 2, 1, s16q01))
+economicshock2 <- economicshock1 %>%
+  group_by(hhid) %>% 
+  summarize(total_shock = ifelse(all(is.na(s16q03)), NA, sum(s16q03,
+                                                             na.rm = TRUE)))
+enterprise2<- enterprise1 %>% 
+  group_by(hhid) %>% 
+  summarize(business= ifelse(all(is.na(s09q01__1)), NA, sum(s09q01__1,
+                                                            na.rm = TRUE)))
+income3 <- income2 %>%
+  na.omit(total_income)
+```
+
+```{r merging data sets of selected variables, message=FALSE, warning=FALSE}
+merged <- left_join(income3, housing1, by = c("hhid")) %>% 
+  left_join(education2, by = c("hhid")) %>% 
+  left_join(health2, by = c("hhid")) %>% 
+  left_join(economicshock2, by = c("hhid")) %>% 
+  left_join(assets2, by = c("hhid")) %>% 
+  left_join(enterprise2, by= c("hhid"))
+
+merged1<- merged %>% 
+  filter(!is.na(education_level))
+merged2<- merged1 %>% 
+  filter(!is.na(total_shock))
+merged3<- merged2 %>% 
+  filter(!is.na(total_injury))
+merged4<- merged3 %>% 
+  filter(!is.na(s14q04a))
+merged4<- merged4 %>% 
+  filter(!is.na(total_injury))
+#sum(!is.na(merged4$total_assets))
+names(merged4)[names(merged4)== "s14q04a"]<- "rent_val"
+```
+
+```{r Turning education (categorical varibale) into a factor variable, message=FALSE, warning=FALSE}
+fact_edu<- merged4$education_level
+Fact_Edu <- factor(fact_edu)
+merged4 <- cbind(merged4, Fact_Edu)
+#levels(merged4$Fact_Edu)
+levels(merged4$Fact_Edu) <- c("None", "FSLC", "MSLC", "JSSC", "SSS", "AL", "NCE",
+                              "BA", "MA", "PHD", "Other",  "VOCC", "VOCD")
+#levels(merged4$Fact_Edu)
+merged4$Dummy.FSLC<- ifelse(merged4$Fact_Edu== "FSLC", 1, 0)
+merged4$Dummy.MSLC<- ifelse(merged4$Fact_Edu== "MSLC", 1, 0)
+merged4$Dummy.JSSC<- ifelse(merged4$Fact_Edu== "JSSC", 1, 0)
+merged4$Dummy.SSS<- ifelse(merged4$Fact_Edu== "SSS", 1, 0)
+merged4$Dummy.AL<- ifelse(merged4$Fact_Edu== "AL", 1, 0)
+merged4$Dummy.NCE<- ifelse(merged4$Fact_Edu== "NCE", 1, 0)
+merged4$Dummy.BA<- ifelse(merged4$Fact_Edu== "BA", 1, 0)
+merged4$Dummy.MA<- ifelse(merged4$Fact_Edu== "MA", 1, 0)
+merged4$Dummy.PHD<- ifelse(merged4$Fact_Edu== "PHD", 1, 0)
+merged4$Dummy.Other<- ifelse(merged4$Fact_Edu== "Other", 1, 0)
+merged4$Dummy.VOCC<- ifelse(merged4$Fact_Edu== "VOCC", 1, 0)
+merged4$Dummy.VOCD<- ifelse(merged4$Fact_Edu== "VOCD", 1, 0)
+```
+
+### Descriptive statistics of the Variables
+To understand the behavior and distribution of our chosen variables, descriptive statistics for each variable were generated. Simple visualizations were also created to aid in visualizing the distribution of the data which aided in scaling and transforming the variables accordingly. Refer to Appendix 1 for descriptive statistics and plots of each variable.  
+
+### Scaling of Variables and removal of outliers
+The income and predicted rental value variables were very large and were therefore scaled to make them easier to work with. They were divided by 1000 and therefore they will both have units in terms of thousand Naira. For the 4 continuous variables (income, predicted rental values, days suffered in injury, and number of assets owned), outliers were also omitted to make sure that they do not effect the data. All the variables were positively skewed, with very long and thin tails to the right,  as observed from the above visualizations of the distributions of the variables above. Therefore removing the extreme observations from these variables will help to enhance the predicting their power. See the plots of the distribution of the variables after their transformations in Appendix 2.  
+
+
+```{r Removal of outliers and Scaling of Income, message=FALSE, warning=FALSE}
+# Scaling income
+merged4$total_income <- merged4$total_income/1000
+
+# Removing outliers for income
+total_income_1 <- ifelse(merged4$total_income>= 1500, NA, merged4$total_income)
+
+```
+
+```{r Removal of outliers and Scaling of Predicted rental Values, message=FALSE, warning=FALSE}
+# Scaling predicted rental values
+merged4$rent_val <- merged4$rent_val/1000
+
+# Removing outliers for predicted rental values
+rent_val1 <- ifelse(merged4$rent_val>= 500, NA, merged4$rent_val)
+
+```
+
+```{r Removal of outliers for Days SUffered in Injury, message=FALSE, warning=FALSE}
+# Removing ouliers for days suffered in injury
+total_injury_1 <- ifelse(merged4$total_injury>= 97, NA, merged4$total_injury)
+
+```
+
+```{r Removal of outliers for Number of Assets Owned, message=FALSE, warning=FALSE}
+
+# Removing outliers for Assets Owned
+total_assets_1 <- ifelse(merged4$total_assets>= 100, NA, merged4$total_assets)
+
+```
+
+Creating a new table with the transformed variables:  
+```{r merging transformed variables, message=FALSE, warning=FALSE}
+merged5 <- cbind(merged4, rent_val1, total_assets_1, total_income_1, total_injury_1)
+merged6 <- na.omit(merged5)
+```
+
+## Results and Discussion  
+Regressions for each variable against the number of economic shocks were created to help us examine the effects of each independent variable on the outcome variable. In the following discussion, refer to Appendix 4 for the single linear regression model for each variable. A multiple regression model will then be created to gain a better understanding of the relationship between the independent variables and the number of economic shocks thorugh a single model.  
+
+### Effect of household income levels on the number of economic shocks
+
+```{r regressing the Number of economic shocks on income, message=FALSE, warning=FALSE}
+shock_income <- lm(merged6$total_shock ~ merged6$total_income_1)
+plot(merged6$total_income_1, merged6$total_shock,
+     main = "Effect of household income on number of economic shocks",
+     xlab = "Monthly Income (Thousand Naira)",
+     ylab = "Number of economic shocks", 
+     col = "brown", pch=20) + abline(shock_income, lwd = 2, col = "blue")
+```
+As we can observe from the graph, there are more points clustered in the right hand side of the graph, which indicates that, in general, with a lower level of income, a household is bound to experience more economic shocks. A line of best fit based on a linear regression model was fitted to the plot to observe the trend in the data. Due to the fact that a large percentage of the data was clustered on the third quadrant, the line of best fit did not accurately represent the trend in the data. An exponential model may have been be more appropriate to estimate the trend.  
+  
+From the output of the regression, the amount of income that a household receives affects the number of shocks that a household faces. A 1000 Naira increase in the amount of income leads to a -0.001616 increase in the number of economic shocks that a household faces. This makes sense since an increase of one Naira (approx. USD 2.2) is relativley small to have a noticeable changes in the number of shocks. 1000 Naira would have minimal impact on the household in terms of consumption, disposable income and other parameters for living a comfortable life with minimal economic stress. Therefore, a small negative coefficient is appropriate. Assuming an income of zero Naira, a household will encounter an average of 4.650292 (around 5) economic shocks. Both of these coefficients are statistically significant. We also see that only around 0.77% of the variation in the number of economic shocks can be explained by the variation in the amount of income received in a household. This R-squared coefficient is small, smaller that one would expect, due to the fact that income is a direct indicator of standards of living and almost directly predicts the number of economic shocks that a household may encounter.  
+
+### Effect of household education levels on the number of economic shocks  
+
+We see that on average, an increase in the level of education decreased the number of economic shocks that a household encounters. On average, a household with no education faced approximately 5 economic shocks on average. This is highly statistically significant which tells that this is unlikely due to chance. It makes sense since having no education puts leaves you out of many economic and income opprotunities and thus are more likely to face economic shocks.  
+  
+If a household was to increase their level of education by getting a first school leaving certificate (FSLC), they would experience roughly 0.1706 less shocks, on average, than if they had no education at all. A Middle School Leaving Certificate (MSLC) would make a household experience around 1.8 less shocks on average than if it was to have no education at all. Getting a Junior Secondary School Certificate (JSSC) makes a household experience, on average, around 0.1 less shocks than if it was to have no education at all, and getting a Senior Secondary School Certificate (SSS) would lead to households facing around 0.5 less economic shocks on average than if they had no education at all. These results are not statistically significant which means that they are likely due to chance. This makes sense because these are very low levels of education and they are less likely to make an impact on an individuals' ability to be better off economically, such as in earning a high income. But they also reflect that there individuals in the study that have benefited economically by leveling up their education even to these low levels. For instance, this might be individuals with low education levels who own businesses or who are employed and earn income or some form of monetary compensation to make them better off economically and thus to experience less economic shocks. But due to the fact that these results are not statistically significance, the effect of these low levels of education on a household's economic stress or strength is by chance.  
+  
+Higher Levels of education showed to have a larger and stronger effect on households' economic robusticity. Having an Advance Level certificate showed to reduce households' number of economic shocks by around 1.5 on average compared to if they had no education at all. A household with a Nursing Degree (NCE) would experience around 1.25 less economic shocks on average compared to if it had not degree at all. A household with a Bachelor's Degree would experience approximately 1.4 less economic shocks on average compared to if they had no education, and that with a Masters degree (MA) would experience approximately 1.5 less economic shocks on average than one with no education at all. These results are statistically significant which indicates that it is highly likely that they are not due to chance. This makes sense because because these are the education levels that have real economic impact. With these education qualifications, individuals are more likely to get employed and or get other opportunities for sources of income. Therefore they are less likely to face economic shocks than if they had the lower education qualifications.  
+  
+The remaining education qualifications are held by only a small minority of households in the data and are not statistically significant, which indicates that the effect of having these education qualification is by chance. A surprising result, though, is that of PhD which shows that on average households with PhDs face more economic shocks than households with no education. While it is not statistically significant, it could present an interesting relationship to explore. The results also indicate that only around 1.5% of the variation in the number of economic shocks can be explained by the variation in the level of education.
+
+### Effect of household health on the number of economic shocks
+
+```{r regressing the Number of economic shocks on Health (Number of days suffered ), message=FALSE, warning=FALSE}
+shock_inj <- lm(merged6$total_shock ~ merged6$total_injury_1)
+plot(merged6$total_injury_1, merged6$total_shock,
+     xlab = "NUmber of days suffered in injury", 
+     ylab = "Number of Economic Shocks",
+     main = "Effect of number of health on number of economic shocks",
+     pch=20, col = "brown") + abline(shock_inj, lwd = 2, col = "blue")
+```
+From the plot, we see that most of the data points are clustured in the third quadrant which tells that on average, a lower number of days suffered in injury or illness results in less economic shocks experienced by that household. This makes sense as with less illnesses, people from households can go to work and earn income to become better off economically. While from raw observation we can tell that the data is scattered and has almost no trend, a linear model was fitted into the plot to draw out a trend in the data. We see from this line of best fit (blue line) that, on average, an increase in the number of days suffered in injury or illness increases the number of economic shocks experienced by a household.  
+ 
+The results from the regression output quantify this effect and tell us that an increase of one day suffered in injury results in a 0.037 increase in the number of economic shocks on average experienced by a household. We also see that on average, a household with perfect health, that is, zero days suffered in injury or illnesses, faces around 3.82 economic shocks on average. Both of these coefficients are statistically significant which means that they are not occurring by chance and can be relied upon to predict the data. We also observe that only 1.79% of the variation in the number of economic shocks can be explained by the variation in health.
+
+### Effect of number of assets owned on the number of economic shocks
+
+```{r regressing the Number of economic shocks on Number of assets owned, message=FALSE, warning=FALSE}
+shock_asset <- lm(merged6$total_shock ~ merged6$total_assets_1)
+plot(merged6$total_assets_1, merged6$total_shock,
+     xlab = "Number of Assets owned by households",
+     ylab = "Number of Economic Shocks",
+     main = "Effect of Number of Assets Owned on Number of Economic Shocks",
+     col = "brown", pch=20) + abline(shock_asset, lwd = 2, col = "blue")
+```
+Looking at the plot, there is almost no apparent relationship that can be drawn based on pure observation. The data points are spread throughout the third quadrant with no visible trend. By fitting a linear model through the dat points, we are able to observe a very weak negative relationship between the number of assets owned and the number of economic shocks a houshold experiences. This suggest that the number of assets owned by a household has almost not impact on the number of economic shocks experienced by that household.  
+  
+Results from the linear regression model suggest that a unit increase in the number of assets owned by a household leads to a 0.008 decrease in the number of economic shocks experienced by a household. This is a very small effect, suggesting that there is almost no effect at all. We also see that this result is not statistically significant which means that the observed effect of the number of assets on economic shocks is not only very small but also occurs by chance. Therefore, it makes it an unreliable predictor of the number of economic shocks experienced by a household. In addition, we see that the R Squared value is -0.00005.52. This value is not only very small but is also negative which indicates that this linear model is a worse fit to the data than a horizontal line. Therefore, the number of assets owned is not a good variable to use for predicting the number of economic shocks experienced by households in our data.  
+
+### Effect of the condition of houses on the number of economic shocks
+
+```{r regressing the Number of economic shocks on housing conditions (predicted rental value), message=FALSE, warning=FALSE}
+shock_rent <- lm(merged6$total_shock ~ merged6$rent_val1)
+plot(merged6$rent_val1, merged6$total_shock,
+     xlab = "Predicted rental value (Thousand Naira)", 
+     ylab = "Number of Economic Shocks",
+     main = "Effect of predicted rental value on the number of economic shocks",
+     col = "brown", pch=20) + abline(shock_rent, lwd = 2, col = "blue")
+```
+From the graph above, we see that most of the data points on the predicted rental values are concentrated in the third quadrant of the plot. From this, we can understand that a majority of the houses from the study were not in good condition hence the low predicted rental values and only a few were in good condition. We can observed that on average, households with small predicted rental values, which are indicators of houses that are not in very good condition, face a higher number of economic shocks. While the data points are scattered, a decreasing trend is inherent in the data. A linear model was fitted to the plot to estimate the linear trend in the data. While the linear model shows a decreasing trend in the data, a different line of best fit, for instance an exponential model, may have provided a better fit to the data.  
+  
+From the output of the regression model, we can see that a 1000 Naira increase in the predicted rental value of a household, on average, results in a 0.0039 decrease in the number of economic shocks faced by that household. While this coefficient suggests a small effect, it makes sense since an increase of 1000 Naira in the predicted rental value of a household doe not have any noticeable impact on the value of the house. Therefore, the effect will be very small, in fact, almost unnoticeable. This result is statistically significant and the R Squared value of 0.005284 tells us that approximately 0.53% of the variation in the number of economic shocks can be explained by the variation in the rental value of households.  
+
+### Multiple linear regression  
+
+```{r multiple regressio model for main specification, message=FALSE, warning=FALSE}
+multi_1 <- lm(merged6$total_shock~ merged6$total_assets_1 +
+                merged6$total_income_1 + merged6$rent_val1 + 
+                merged6$Fact_Edu + merged6$total_injury_1)
+summary(multi_1)
+
+```
+By putting the all the variables in one linear model, we see that, ceteris paribus, a unit increase in the number of assets owned by a household, given that they have no education at all, would lead to a 0.00786 increase, on average, in the number of economic shocks experienced by that household. As seen earlier in the single regression model, the effect of the number of assets owned by a household is  statistically not significant and this remains as is in the multiple regression model. An increase of 1000 Naira in the amount of income in a household with no education at all leads to 0.001 decrease in the number of shocks experienced by a household, on average, holding all other factors constant. This effect is statistically significant. Holding all other variables constant, an increase of 1000 Naira in the predicted rental value of a household (an indicator of better house conditions) that has no education at all leads to a 0.00224 decrease in the number of economic shocks experienced by that household, on average. However, this result is due to chance. We also see that, ceteris paribus, an unit increase in the number of days suffered in injury given that a household has no education at all, leads to a 0.03626 increase in the number of economic shocks suffered by that household. This result is not due to chance and thus is a reliable predictor in the model. 
+  
+With the education parameter, Advance Level certificate , a Bachelor's Degree and a Master's degree were the statistically significant levels of the education variable. We see that A household that has an Advance Level certificate will will experience, on average, 1.46 economic shocks less than a household with no education, holding all other variables constant. A household with a Bachelor's Degree would experience 1.11 less economic shocks on average than a household with no education, holding all other variables constant. And, ceteris paribus, a household with a Master's Degree would experience approximately 1.21 less economic shocks on average than a household with no education at all. These coefficients are some of the highest (with a negative direction) in the education variable and this echoes the point made earlier on that the three education qualifications are the most effective in terms of reducing economic stress on household due to their usefulness and practicality in the in the case of Nigeria. Controlling for all other factors, households with any of these three education levels, on average, are expected to be better off economically than those with no education or those with any other level of education, and with a very low likelihood of such  an observation being explained by chance or by any other random factors.  
+  
+The intercept tells us that, a household with no education and none of the remaining factors (i.e, when all other variables equal zero) will on average experience 4.433 economic shocks with a low likelihood of this relationship being due to chance. This makes sense because with no income, no education, no assets owned and with a house in poor condition, we would expect a household to experience a certain level or number of economic shocks. This could also be reflective of the systematic or macroeconomic risk factors in the entire country of Nigeria that make individual households prone to economic shocks. These could be factors such as inflation, corruption, a relatively weak economy, low confidence in the economy and leadership of the country and other macroeconomic factors that would lead to households experiencing systematic economic shocks.  
+  
+Checking for multicollinearity in the data using the Variance inflation factor (VIF) method.  
+  
+```{r checking for multicollinearity in regression 1}
+vif(multi_1)
+```
+From running the VIF function, we see that there is minimal to no multicollinearity among the variables in our data. This is indicated through relatively low General VIF (GVIF) values of all the variables in the study. A VIF that is less than 5 is indicative of low multicollinearity in the model. Therefore, with regards to our multiple regression model, we can be confident that the explanatory power is not affected by high multicollinearity in our data.
+
+The R-squared of the model is 0.03618 which means that only around 3.6% of the variation in the number of economic shocks is due to the variation in the explanatory variables. This suggests that the model has a relatively low explanatory power and may not be a reliable predictor for the number of economic shocks. This could be due to multiple reasons: As we saw through the single linear regressions, most of the variables used in the model portrayed low correlation coefficients with the number of economic shocks and thus negatively affected the R-Squared value in the multiple linear regression. This could be an indicator that non-linear models might have been better alternatives to fit and predict the data since the correlation coefficients assume a linear relationship between the independent and the outcome variables.  
+  
+Furthermore, even though outliers were removed from the variables that were used in the model, the variables still showed skewness in their distribution, which could have impacted their explanatory power. Further transformations of the data might have been necessary for a more accurate and reliable model. Another reasonable rationale is that there are many other factors that affect the number of economic shocks that a household face, and this study only used a few of them and therefore incorporating more variables into the model may improve its explanatory power. This rationale as the alternative hypothesis for this study and it will be tested shortly  
+
+Checking for homoscedasticity assumption in the generated model. 
+```{r Homescedasticity checks}
+plot(multi_1, which=1, pch = 20, lwd = 2)
+```
+Based on the plot above, it is evident that our generated model violates the heteroscedasticity assumption as we can see that the residuals follows a certain linear trend as showed by the fitted linear model and at the same time the residuals are unevenly distributed. Therefore, due to the apparent heteroscedasticity in the model, we can tell that our coefficients are less accurate than expected, and thus the model is may not be reliable in predicting the number of economic shocks faced by households.  
+
+### Alternatrive specification  
+In the alternative hypothesis, the study examines the effect of an additional factor into the multiple regression model. It examines the effect of the effects of owning a business on the number of economic shocks that a household experiences. See the distribution of the Enterprise/business variable and the linear regression model showing the individual effect of this variable on the number of economic shocks in Appendix 3. Here, we pay no attention to explaining the individual relationship between owning a business and the number of economic shocks that a household faces (this will be shown in the appendices), rather we focus more on observing the effect of having this additional variable on the multiple regression model.  We also examine the effect of linearizing the data with logarithmic transformations on the explanatory power and overall accuracy of predicting the outcome variable. Refer to Appendix 5 for the regressions of both alternative models.
+
+```{r Alternative specification, results= FALSE}
+fact_Bus <- merged6$business
+fact_Bus <- factor(fact_Bus)
+merged6 <- cbind (merged6, fact_Bus)
+levels(merged6$fact_Bus)
+levels(merged6$fact_Bus) <- c("1"="0", "2"="1")
+merged6$fact_Bus<- relevel(factor(merged6$fact_Bus), ref= "0")
+# Renaming the categories to Yes and No
+levels(merged6$fact_Bus) <- c("0"="Yes", "1"="No")
+
+```
+
+```{r Alternative linear regression}
+multi_2 <- lm(merged6$total_shock~ merged6$total_assets_1 +
+                merged6$total_income_1 + merged6$rent_val1 + 
+                merged6$Fact_Edu + merged6$total_injury_1 +
+               merged6$fact_Bus)
+```
+From the addition of one more variable, we can only observe changes in the value of the unadjusted R-Squared value, not the adjusted R-squared (which in fact remains unchanged). Therefore, adding the variable for business did not affect or improve the model. This could also be due to the fact the correlation between the enterprise variable and the number of economic shocks was small and not statistically significant.  
+  
+Let us now observe the effect of linearizing using logarithmic transformations on the accuracy and explanatory power of the model. Since both linear regression models have the same adjusted explanatory power, we only log-transform the seond model with more variables and the would also tell us how the first model would change with a linear transformation.   
+
+```{r linearizing the alternative model}
+linear_multi2 <- lm(merged6$total_shock ~ log(merged6$total_assets_1) +
+                      log(merged6$total_income_1) + 
+                      log(merged6$rent_val1) + 
+                      merged6$Fact_Edu + 
+                      log(merged6$total_injury_1) + 
+                      merged6$fact_Bus)
+```
+Based on the results from linearizing the model, we see that the predicting power of the model increased from the initial R-Squared value of 0.0362 to 0.04343. While there was not a significant increase in the value of R-square, there certainly was an increase in the predicting power of the model after linearizing the continuous variables. Therefore, this linearized model is a better predictor of the number of economic shocks experienced by household since it can explain for more variation in the outcome variable than the first two models could.  
+
+checking for multicollinearity in the linearized model.  
+  
+```{r checking for multicollinearity and homscedasticity assumption in the linearized model}
+vif(linear_multi2)
+
+plot(linear_multi2, which=1, pch = 20, lwd = 2)
+
+```
+From this, we can also confirm that there is minimal to no multicollinearity in the linearized regression model. Therefore, mutlicollinearity does not negatively impact the values of R-squared obtained for this model. However, we see that the accuracy of the model still suffers from homoscedasticy assumption violation and hence cannot be fully relied upon to accurately predict the number of economic shocks per household. 
+
+## Conclusion and Evaluation 
+This study explored the relationship between households' economic stability and some of the parameters of measuring living standards, which were income, education levels, health, condition of houses and the number of assets owned. The study found a positive relationship between health and number of economic shocks and negative relationships between income, condition of houses and levels of education (with the greatest effects coming from the three main or most marketable education qualifications in the Nigerian job market).  
+An alternative linear hypothesis explored the effect of an additional variable in predicting the outcome variable. However, in this study, an increase in an extra variable did not have any noticeable effects on the model. A logarithmic transformation was then applied to the alternative model which ultimately proved to be a better model in terms of its explanatory power. Were the main specification and initial hypothesis correct? While the effects of the variables on the outcome variable were hypothesized correctly, the regression specification ultimately proved to be of low accuracy and explanatory power, making it an unreliable predictor of the outcome variable. From the results obtained, the transformed alternative regression model proved to be a more reliable model to predict the outcome variable despite it also suffering from potentially inaccurate coefficients. This model might be further improved by incorporating more factors in the model to yield more accurate results. 
+
+As seen throughout the study, all the generated models suffered from low correlations and R-Squared values and this lead to further negative effects being observed such as in homoscedasticity violation. This could be mitigated through nonlinear models, or using variables that are more correlated with the outcome variable or by incorporating more variables in the study as explained earlier.  
+  
+If this study was to be repeated, a better approach would be to choose another variable that better represents economic stress or vulnerability. This could be another measure assessed in the survey such as a households' debt or the probability that a household would be denied a loan if they were to apply for one from a bank. This would form a relatively more interesting ground of exploration and there would perhaps be higher correlations with chosen variables to yield more accurate and more reliable models.
+  
+
+\newpage
+## References
+Fusco, A. (2012, February). The relationship between income and housing deprivation in
+Luxembourg: a longitudinal analysis. CEPS/INSTEAD. Retrieved April 21, 2023, from https://liser.elsevierpure.com/ws/portalfiles/portal/11782696/Working+Paper+n%C2%B02012-10#:~:text=As%20expected%2C%20income%20is%20negatively,the%20index%20of%20housing%20deprivation.  
+
+Noerhidajati, S., Purwoko, A., Werdaningtyas, H., Kamil, A., & Dartanto, T. (2021, March). Household financial vulnerability in Indonesia: Measurement and determinants. Economic Modelling, 96, 433-444. Retrieved April 21, 2023, from https://www.sciencedirect.com/science/article/pii/S0264999319319261  
+
+Smith, J. (1999). Healthy Bodies and Thick Wallets: The Dual Relation Between Health and Economic Status. Journal of Economic Perspectives, 13(2), 145–166. Retrieved April 20, 2023, from https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.13.2.145  
+
+Van Vu, H. (2020, February 18). The Impact of Education on Household Income in Rural Vietnam. International Journal of Financial Studies, 8(1),. Retrieved April 20, 2023, from https://doi.org/10.3390/ijfs8010011
+
+
+  
+\newpage
+## Appendices.
+
+### Appendix 1  
+*Descriptive Stats for Income*
+```{r Descriptive Stats for Income, message=FALSE, warning=FALSE}
+library(Hmisc)
+describe(merged4$total_income)
+hist(merged4$total_income, xlab = "Monthly Income", 
+     ylab = "Number of Households",
+     main = "Household Distribution of Income Levels",
+     col= "brown", breaks = 80)
+
+```
+  
+*Descriptive Stats for Education*
+```{r Descriptive Stats for Education, message=FALSE, warning=FALSE}
+
+describe(merged4$Fact_Edu)
+plot(merged4$Fact_Edu, xlab = "Education Level/Qualification", 
+     ylab = "Number of Individuals",
+     main = "Houshold Distribution of Education Levels",
+     col= "brown")
+
+```
+  
+*Descriptive Stats for Health*
+```{r Descriptive Stats for Health, message=FALSE, warning=FALSE}
+describe(merged4$total_injury)
+hist(merged4$total_injury, col = "brown",
+     xlab = "Number of Days suffered in injuries",
+     ylab = "Number of individuals",
+     main = "Household Distribution of Days suffered in injury", breaks = 80)
+
+```
+  
+*Descriptive Stats for Assets*
+```{r Descriptive Stats for Assets, message=FALSE, warning=FALSE}
+describe(merged4$total_assets)
+hist(merged4$total_assets, col = "brown",
+     xlab = "Number of Assets owned by households",
+     ylab = "Number of households",
+     main = "Household Distribution of Number of Assets Owned", breaks = 80)
+
+```
+  
+*Descriptive Stats for Housing*
+```{r Descriptive Stats for Housing, message=FALSE, warning=FALSE}
+describe(merged4$rent_val)
+hist(merged4$rent_val, col = "brown",
+     xlab = "Predicted rental values of households",
+     ylab = "Number of households",
+     main = "Household distribution of predicted rental values", breaks = 80)
+
+```
+  
+\newpage  
+### Appendix 2  
+*Distribution after removal of outliers and Scaling of Income*
+```{r Removal2 of outliers and Scaling of Income, message=FALSE, warning=FALSE}
+hist(total_income_1,
+     xlab = "Monthly Income (Thousand Naira)", 
+     ylab = "Number of Households",
+     main = "Household Distribution of Income Levels",
+     col= "brown", breaks = 80)
+```
+  
+*Distribution after removal of outliers and Scaling of Predicted rental Values*
+```{r Removal2 of outliers and Scaling of Predicted rental Values, message=FALSE, warning=FALSE}
+hist(rent_val1,
+     xlab = "Predicted rental value (Thousand Naira)", 
+     ylab = "Number of Households",
+     main = "Household Distribution of Predicted rental values",
+     col= "brown", breaks = 80)
+```
+  
+*Distribution after removal of outliers for Days SUffered in Injury*
+```{r Removal2 of outliers for Days SUffered in Injury, message=FALSE, warning=FALSE}
+hist(total_injury_1,
+     xlab = "NUmber of days suffered in injury", 
+     ylab = "Number of Households",
+     main = "Household Distribution of Days suffered in Injury",
+     col= "brown", breaks =80)
+```
+  
+*Distribution after removal of outliers for Number of Assets Owned*
+```{r Removal2 of outliers for Number of Assets Owned, message=FALSE, warning=FALSE}
+hist(total_assets_1,
+     xlab = "Number of Assets owned by households",
+     ylab = "Number of households",
+     main = "Household Distribution of Number of Assets Owned",
+     col= "brown", breaks =80)
+```
+
+\newpage
+### Appendix 3  
+*Distribution of variable Enterprise and its effect on the number of economic shocks (regression)*
+```{r distribution2 of enterprise and regression model}
+plot(merged6$fact_Bus, xlab = "Owning a Business",
+     ylab = "Number of Individuals", 
+     main = "Effect of owning a business on Economic shocks", col = "brown")
+shock_fact_Bus<- lm(merged6$total_shock~merged6$fact_Bus)
+summary(shock_fact_Bus)
+```
+
+\newpage
+### Appendix 4  
+*Linear regression of the Number of economic shocks on income*
+```{r regression of the Number of economic shocks on income, message=FALSE, warning=FALSE}
+summary(shock_income)
+```
+  
+*Linear regression of the Number of economic shocks on Education Level*
+```{r regression of the Number of economic shocks on Education Level, message=FALSE, warning=FALSE}
+shock_Fact_Edu<- lm(merged6$total_shock~ merged6$Fact_Edu)
+summary(shock_Fact_Edu)
+```
+  
+*Linear regression of the Number of economic shocks on Health (Number of days suffered in injury)*
+```{r regression of the Number of economic shocks on Health (Number of days suffered ), message=FALSE, warning=FALSE}
+summary(shock_inj)  
+```
+
+*Linear regression of the Number of economic shocks on Number of assets owned*
+```{r regression of the Number of economic shocks on Number of assets owned, message=FALSE, warning=FALSE}
+summary(shock_asset)
+```
+
+*Linear regression of the Number of economic shocks on housing conditions*
+```{r regression of the Number of economic shocks on housing conditions (predicted rental value), message=FALSE, warning=FALSE}
+summary(shock_rent)
+```
+
+\newpage
+### Appendix 5  
+*Linear regression model for the alternative specification*
+```{r Linear regression for Alternative specification}
+summary(multi_2)
+```
+
+*Linear regression model for the log-transformed alternative regression*
+```{r Linear regression for linearized alternative model}
+summary(linear_multi2)
+```
